@@ -20,27 +20,27 @@ The question asked by stakeholders is that we need to meet the KPI of 19 million
 
   There is promotion discount data so that plays a role into foot traffic in this sales. It was beneficial to group these discounts to group these discounts by family and day since out KPI is revolving around day. The code cosistented of this 
   
-    SELECT SUM(onpromotion) AS total_discount, 
-  family,
-    CASE WHEN EXTRACT(DAYOFWEEK from date) =1 THEN 'sunday' 
-    WHEN EXTRACT(DAYOFWEEK from date) = 2 THEN 'monday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 3 THEN 'tuesday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 4 THEN 'wednesday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 5 THEN 'thursday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 6 THEN 'friday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 7 THEN 'saturday'
-    END AS day
-  FROM `dulcet-hulling-375416.Grocery.Test`
-  GROUP BY family, day
-  ORDER BY day
+                    SELECT SUM(onpromotion) AS total_discount, 
+                  family,
+                    CASE WHEN EXTRACT(DAYOFWEEK from date) =1 THEN 'sunday' 
+                    WHEN EXTRACT(DAYOFWEEK from date) = 2 THEN 'monday'
+                    WHEN EXTRACT(DAYOFWEEK from date) = 3 THEN 'tuesday'
+                    WHEN EXTRACT(DAYOFWEEK from date) = 4 THEN 'wednesday'
+                    WHEN EXTRACT(DAYOFWEEK from date) = 5 THEN 'thursday'
+                    WHEN EXTRACT(DAYOFWEEK from date) = 6 THEN 'friday'
+                    WHEN EXTRACT(DAYOFWEEK from date) = 7 THEN 'saturday'
+                    END AS day
+                  FROM `dulcet-hulling-375416.Grocery.Test`
+                  GROUP BY family, day
+                  ORDER BY day
 
 
 
   Then I wanted to get the total sales by family of this grocery store because I wanted to focus on the families that produce the most sales to reach our 19 millon transactions KPI. 
 
-    SELECT family, ROUND(SUM(sales),2) AS sales
-    FROM `dulcet-hulling-375416.Grocery.Train`
-    GROUP BY family
+                    SELECT family, ROUND(SUM(sales),2) AS sales
+                    FROM `dulcet-hulling-375416.Grocery.Train`
+                    GROUP BY family
 
 Through extracting this data we conclueded that 
 
