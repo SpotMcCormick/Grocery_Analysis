@@ -5,18 +5,18 @@ https://www.kaggle.com/c/favorita-grocery-sales-forecasting
 
 The question asked by stakeholders is that we need to meet the KPI of 19 million trasactions each year by the day. To get the total number of transactions by day i wrote this code in SQL 
 
-  SELECT 
-  SUM(transactions) as total_transactions,
-  CASE WHEN EXTRACT(DAYOFWEEK from date) =1 THEN 'sunday' 
-  WHEN EXTRACT(DAYOFWEEK from date) = 2 THEN 'monday'
-  WHEN EXTRACT(DAYOFWEEK from date) = 3 THEN 'tuesday'
-  WHEN EXTRACT(DAYOFWEEK from date) = 4 THEN 'wednesday'
-  WHEN EXTRACT(DAYOFWEEK from date) = 5 THEN 'thursday'
-  WHEN EXTRACT(DAYOFWEEK from date) = 6 THEN 'friday'
-  WHEN EXTRACT(DAYOFWEEK from date) = 7 THEN 'saturday'
-  END AS day
-  FROM `dulcet-hulling-375416.Grocery.Transactions`
-  GROUP BY day
+        SELECT 
+        SUM(transactions) as total_transactions,
+        CASE WHEN EXTRACT(DAYOFWEEK from date) =1 THEN 'sunday' 
+        WHEN EXTRACT(DAYOFWEEK from date) = 2 THEN 'monday'
+        WHEN EXTRACT(DAYOFWEEK from date) = 3 THEN 'tuesday'
+        WHEN EXTRACT(DAYOFWEEK from date) = 4 THEN 'wednesday'
+        WHEN EXTRACT(DAYOFWEEK from date) = 5 THEN 'thursday'
+        WHEN EXTRACT(DAYOFWEEK from date) = 6 THEN 'friday'
+        WHEN EXTRACT(DAYOFWEEK from date) = 7 THEN 'saturday'
+        END AS day
+        FROM `dulcet-hulling-375416.Grocery.Transactions`
+        GROUP BY day
 
   There is promotion discount data so that plays a role into foot traffic in this sales. It was beneficial to group these discounts to group these discounts by family and day since out KPI is revolving around day. The code cosistented of this 
   
