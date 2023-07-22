@@ -7,14 +7,14 @@ The question asked by stakeholders is that we need to meet the KPI of 19 million
 
   SELECT 
   SUM(transactions) as total_transactions,
-    CASE WHEN EXTRACT(DAYOFWEEK from date) =1 THEN 'sunday' 
-    WHEN EXTRACT(DAYOFWEEK from date) = 2 THEN 'monday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 3 THEN 'tuesday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 4 THEN 'wednesday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 5 THEN 'thursday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 6 THEN 'friday'
-    WHEN EXTRACT(DAYOFWEEK from date) = 7 THEN 'saturday'
-    END AS day
+  CASE WHEN EXTRACT(DAYOFWEEK from date) =1 THEN 'sunday' 
+  WHEN EXTRACT(DAYOFWEEK from date) = 2 THEN 'monday'
+  WHEN EXTRACT(DAYOFWEEK from date) = 3 THEN 'tuesday'
+  WHEN EXTRACT(DAYOFWEEK from date) = 4 THEN 'wednesday'
+  WHEN EXTRACT(DAYOFWEEK from date) = 5 THEN 'thursday'
+  WHEN EXTRACT(DAYOFWEEK from date) = 6 THEN 'friday'
+  WHEN EXTRACT(DAYOFWEEK from date) = 7 THEN 'saturday'
+  END AS day
   FROM `dulcet-hulling-375416.Grocery.Transactions`
   GROUP BY day
 
