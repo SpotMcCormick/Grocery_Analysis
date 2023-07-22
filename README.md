@@ -3,7 +3,7 @@ This is a project I did for class about a grocery store analysis. I found this d
 https://www.kaggle.com/c/favorita-grocery-sales-forecasting
 
 
-The question asked by stakeholders is that we need to meet the KPI of 19 million trasactions each year by the day. To get the total number of transactions by day i wrote this code in SQL 
+The question asked by stakeholders is that we need to meet the KPI of 19 million trasactions each year by the day. To get the total number of transactions by day I wrote this code in SQL 
 
         SELECT 
         SUM(transactions) as total_transactions,
