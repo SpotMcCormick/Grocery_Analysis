@@ -53,6 +53,10 @@ https://public.tableau.com/app/profile/jeremy.mccormick/viz/GroceryAnalysisStory
 https://public.tableau.com/app/profile/jeremy.mccormick/viz/GroceryAnalysisDashboard/Dashboard1
 
 
+![Dashboard 1 (3)](https://github.com/SpotMcCormick/Grocery_Analysis/assets/132832823/a3a9cf0b-11b4-44ee-89c8-63ceef129d3f)
+
+
+
 ![Story 1](https://github.com/SpotMcCormick/Grocery_Analysis/assets/132832823/bac15909-b807-4d07-995d-f55602507030)
 
     
